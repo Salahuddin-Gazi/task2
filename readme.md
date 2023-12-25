@@ -5,7 +5,7 @@ Task 2: You are working on a dashboard using ReactJS and Tailwind CSS. The dashb
 **Solutions:**
 For this task, I have come up with the idea of - "It will be a monthly revenue previewer app".
 
-It will simply show bar charts of the revenue percentage every month like:
+It will simply show bar charts of the revenue percentage of every month like:
 
 - January - 87%
 - February - 65%
