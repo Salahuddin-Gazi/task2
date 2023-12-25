@@ -9,6 +9,7 @@ yarn.lock
 
 # Parcel
 .cache/
+.parcel-cache/
 dist/
 
 # Logs
