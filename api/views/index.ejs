@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Data Example</title>
+  </head>
+  <body>
+    <style>
+      .text-center {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      table,
+      th,
+      td {
+        text-align: center;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+    </style>
+
+    <h1 class="text-center">Mothly Revenue API</h1>
+
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Revenue</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < revenueData.length; i++) { %>
+          <tr>
+            <td style="text-transform: capitalize">
+              <%= revenueData[i].month %>
+            </td>
+            <td><%= revenueData[i].revenue %>%</td>
+            <td>
+              <form
+                action="/update?month=<%= revenueData[i].month %>"
+                method="post"
+              >
+                <input
+                  type="number"
+                  name="<%= revenueData[i].month %>"
+                  id="revenue_input"
+                  step="0.01"
+                  required
+                />
+                <button type="submit">Update</button>
+              </form>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
