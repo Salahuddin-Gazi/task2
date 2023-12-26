@@ -7,8 +7,9 @@
   "proxy": "http://127.0.0.1:5432",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "cleanup": "rimraf .parcel-cache dist",
+    "start": "npm run cleanup && parcel src/index.html",
+    "build": "npm run cleanup && parcel build src/index.html"
   },
   "author": "Gazi Salahuddin",
   "license": "ISC",
@@ -18,7 +19,8 @@
     "chartjs-plugin-datalabels": "^2.2.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",

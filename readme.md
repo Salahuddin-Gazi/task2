@@ -27,6 +27,42 @@ Used React JS and Parcel as the bundler.
 1.  It will only shows the bar charts.
 2.  It will collect data directly from the REST API.
 
+## Guide
+
+**Install packages**
+
+1.  Install root package
+
+```
+npm install
+```
+
+2.  Install sub packages
+
+```
+npm run package
+```
+
+**Start the project**
+
+```
+npm start
+```
+
+**To access backend data table**
+
+```
+http://127.0.0.1:5432
+```
+
+**To access frontend**
+
+```
+http://127.0.0.1:1234
+```
+
 ### Additionals
 
 Added a video, to easily understand how this project work.
+
+[![Watch the video](./thumbnail.png)](./task_2.mkv)
